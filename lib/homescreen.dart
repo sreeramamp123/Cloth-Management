@@ -13,11 +13,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
-  // List of screens (can be separate widgets for each tab)
+
   final List<Widget> _screens = <Widget>[
     const WardrobeScreen(),
     CommunityExchangePage(),
-    const AnalyticsDashboard(), // Replace Style Inspiration with AnalyticsDashboard
+    const AnalyticsDashboard(),
   ];
 
   void _onItemTapped(int index) {
@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _screens[_selectedIndex], // Display the selected screen
+      body: _screens[_selectedIndex], 
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -41,13 +41,13 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Community Exchange',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.bar_chart), // Change icon for Analytics
-            label: 'Analytics', // Replace Style Inspiration with Analytics
+            icon: Icon(Icons.bar_chart), 
+            label: 'Analytics', 
           ),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.blue,
-        onTap: _onItemTapped, // Switch between tabs
+        onTap: _onItemTapped, 
       ),
     );
   }
