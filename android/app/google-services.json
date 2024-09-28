@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1057700659892",
+    "project_id": "cloth-management-system",
+    "storage_bucket": "cloth-management-system.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057700659892:android:3d1270895f7cee3fe2cde1",
+        "android_client_info": {
+          "package_name": "com.example.cloth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqvhMfLJMbNfKhfR4Djklet_rasQmwLjM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
