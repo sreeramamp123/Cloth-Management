@@ -1,5 +1,5 @@
-import 'package:cloth/Community%20Exchange/community_exchange_screen.dart';
-import 'package:cloth/Style%20Inspiration/style_inspiration_screen.dart';
+import 'package:cloth/Community%20Exchange/community_exchange.dart';
+import 'package:cloth/Dashboard/analytics_dashboard.dart';
 import 'package:cloth/Wardrobe/wardrobe_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -16,8 +16,8 @@ class _HomeScreenState extends State<HomeScreen> {
   // List of screens (can be separate widgets for each tab)
   final List<Widget> _screens = <Widget>[
     const WardrobeScreen(),
-    const CommunityExchangeScreen(),
-    const StyleInspirationScreen(),
+    CommunityExchangePage(),
+    const AnalyticsDashboard(), // Replace Style Inspiration with AnalyticsDashboard
   ];
 
   void _onItemTapped(int index) {
@@ -29,9 +29,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Wardrobe Manager'),
-      ),
       body: _screens[_selectedIndex], // Display the selected screen
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
@@ -44,8 +41,8 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Community Exchange',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.style),
-            label: 'Style Inspiration',
+            icon: Icon(Icons.bar_chart), // Change icon for Analytics
+            label: 'Analytics', // Replace Style Inspiration with Analytics
           ),
         ],
         currentIndex: _selectedIndex,
